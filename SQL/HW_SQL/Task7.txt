@@ -1,0 +1,14 @@
+Задание: 7 (Serge I: 2002-11-02)
+Найдите номера моделей и цены всех имеющихся в продаже продуктов (любого типа) производителя B (латинская буква).
+
+SELECT distinct pc.model AS model, price
+FROM PC INNER JOIN product ON Product.model = pc.model
+WHERE product.maker = 'B'
+UNION
+SELECT distinct laptop.model AS model, price
+FROM laptop INNER JOIN product ON product.model = laptop.model
+WHERE product.maker = 'B'
+UNION
+SELECT distinct printer.model AS model, price
+FROM printer INNER JOIN product ON product.model = printer.model
+WHERE product.maker = 'B'

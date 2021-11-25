@@ -1,10 +1,10 @@
 --1 вывести все поля и все строки
 select * from students;
 
---в2 ывести всех студентов в таблице
+--2 вывести всех студентов в таблице
 select name from students;
 --или
-select * from students 
+select * from students; 
 
 --3 вывести только id пользователей
 select id from students;
